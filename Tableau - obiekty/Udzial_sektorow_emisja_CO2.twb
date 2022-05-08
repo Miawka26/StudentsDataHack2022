@@ -1,0 +1,586 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20221.22.0324.2209                               -->
+<workbook original-version='18.1' source-build='2022.1.0 (20221.22.0324.2209)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Sector (Global-GHG-Emissions-by-sector-based-on-WRI-2020)' inline='true' name='federated.1ddcmni1274yno16dotgq14io93z' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Global-GHG-Emissions-by-sector-based-on-WRI-2020' name='excel-direct.0flqco313eu5d31b50p0c0gtfm2g'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Michal/Desktop/Wykorzystane/eeee/klimat/Global-GHG-Emissions-by-sector-based-on-WRI-2020.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0flqco313eu5d31b50p0c0gtfm2g' name='Sector' table='[Sector$]' type='table'>
+          <columns gridOrigin='A1:B5:no:A1:B5:0' header='yes' outcome='6'>
+            <column datatype='string' name='Sector' ordinal='0' />
+            <column datatype='real' name='Share of global greenhouse gas emissions (%)' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='excel-direct.0flqco313eu5d31b50p0c0gtfm2g' name='Sector' table='[Sector$]' type='table'>
+            <columns gridOrigin='A1:B5:no:A1:B5:0' header='yes' outcome='6'>
+              <column datatype='string' name='Sector' ordinal='0' />
+              <column datatype='real' name='Share of global greenhouse gas emissions (%)' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0flqco313eu5d31b50p0c0gtfm2g' name='Sub-sector' table='[&apos;Sub-sector$&apos;]' type='table'>
+            <columns gridOrigin='A1:B18:no:A1:B18:0' header='yes' outcome='6'>
+              <column datatype='string' name='Sub-sector' ordinal='0' />
+              <column datatype='real' name='Share of global greenhouse gas emissions (%)' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Sector]' value='[Sector].[Sector]' />
+          <map key='[Share of global greenhouse gas emissions (%) (Sub-sector)]' value='[Sub-sector].[Share of global greenhouse gas emissions (%)]' />
+          <map key='[Share of global greenhouse gas emissions (%)]' value='[Sector].[Share of global greenhouse gas emissions (%)]' />
+          <map key='[Sub-sector]' value='[Sub-sector].[Sub-sector]' />
+        </cols>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sector]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B5:no:A1:B5:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sub-sector]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B18:no:A1:B18:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sector</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sector]</local-name>
+            <parent-name>[Sector]</parent-name>
+            <remote-alias>Sector</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sector_0DEE9CF17A434AD2A3610CF71639C5AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Share of global greenhouse gas emissions (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Share of global greenhouse gas emissions (%)]</local-name>
+            <parent-name>[Sector]</parent-name>
+            <remote-alias>Share of global greenhouse gas emissions (%)</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sector_0DEE9CF17A434AD2A3610CF71639C5AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sub-sector</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sub-sector]</local-name>
+            <parent-name>[Sub-sector]</parent-name>
+            <remote-alias>Sub-sector</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sub-sector_1680B0E8915F403987BEC38808484A84]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Share of global greenhouse gas emissions (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Share of global greenhouse gas emissions (%) (Sub-sector)]</local-name>
+            <parent-name>[Sub-sector]</parent-name>
+            <remote-alias>Share of global greenhouse gas emissions (%)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sub-sector_1680B0E8915F403987BEC38808484A84]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Sector (Sector)' datatype='string' name='[Sector]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Agriculture, Forestry &amp; Land Use (AFOLU)&quot;' value='Rolnictwo, leśnictwo i użytkowanie gruntów ' />
+          <alias key='&quot;Energy&quot;' value='Energia' />
+          <alias key='&quot;Industrial processes&quot;' value='Procesy przemysłowe' />
+          <alias key='&quot;Waste&quot;' value='Odpady' />
+        </aliases>
+      </column>
+      <column caption='Sub-sector (Sub-sector)' datatype='string' name='[Sub-sector]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sector' datatype='table' name='[__tableau_internal_object_id__].[Sector_0DEE9CF17A434AD2A3610CF71639C5AF]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sub-sector' datatype='table' name='[__tableau_internal_object_id__].[Sub-sector_1680B0E8915F403987BEC38808484A84]' role='measure' type='quantitative' />
+      <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/Michal/Desktop/Modelowanie/Tableau - obiekty/Sector.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/08/2022 12:34:30 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Sector_0DEE9CF17A434AD2A3610CF71639C5AF' table='[Extract].[Sector_0DEE9CF17A434AD2A3610CF71639C5AF]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='Sector_0DEE9CF17A434AD2A3610CF71639C5AF' table='[Extract].[Sector_0DEE9CF17A434AD2A3610CF71639C5AF]' type='table' />
+            <relation name='Sub-sector_1680B0E8915F403987BEC38808484A84' table='[Extract].[Sub-sector_1680B0E8915F403987BEC38808484A84]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[Sector]' value='[Sector_0DEE9CF17A434AD2A3610CF71639C5AF].[Sector]' />
+            <map key='[Share of global greenhouse gas emissions (%) (Sub-sector)]' value='[Sub-sector_1680B0E8915F403987BEC38808484A84].[Share of global greenhouse gas emissions (%)]' />
+            <map key='[Share of global greenhouse gas emissions (%)]' value='[Sector_0DEE9CF17A434AD2A3610CF71639C5AF].[Share of global greenhouse gas emissions (%)]' />
+            <map key='[Sub-sector]' value='[Sub-sector_1680B0E8915F403987BEC38808484A84].[Sub-sector]' />
+          </cols>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='Sector (Global-GHG-Emissions-by-sector-based-on-WRI-2020)' increment-value='%null%' refresh-type='create' rows-inserted='21' timestamp-start='2022-05-08 00:34:29.900' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Sector</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sector]</local-name>
+              <parent-name>[Sector_0DEE9CF17A434AD2A3610CF71639C5AF]</parent-name>
+              <remote-alias>Sector</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sector</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LPL_RPL' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sector_0DEE9CF17A434AD2A3610CF71639C5AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Share of global greenhouse gas emissions (%)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Share of global greenhouse gas emissions (%)]</local-name>
+              <parent-name>[Sector_0DEE9CF17A434AD2A3610CF71639C5AF]</parent-name>
+              <remote-alias>Share of global greenhouse gas emissions (%)</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Sector</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sector_0DEE9CF17A434AD2A3610CF71639C5AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sub-sector</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sub-sector]</local-name>
+              <parent-name>[Sub-sector_1680B0E8915F403987BEC38808484A84]</parent-name>
+              <remote-alias>Sub-sector</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sub-sector</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LPL_RPL' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sub-sector_1680B0E8915F403987BEC38808484A84]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Share of global greenhouse gas emissions (%)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Share of global greenhouse gas emissions (%) (Sub-sector)]</local-name>
+              <parent-name>[Sub-sector_1680B0E8915F403987BEC38808484A84]</parent-name>
+              <remote-alias>Share of global greenhouse gas emissions (%)</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sub-sector</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sub-sector_1680B0E8915F403987BEC38808484A84]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Sector:nk]' palette='blue_red_brown_10_0' type='palette'>
+            <map to='#466f9d'>
+              <bucket>&quot;Agriculture, Forestry &amp; Land Use (AFOLU)&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#91b3d7'>
+              <bucket>&quot;Energy&quot;</bucket>
+            </map>
+            <map to='#c8133b'>
+              <bucket>&quot;Industrial processes&quot;</bucket>
+            </map>
+            <map to='#feb5a2'>
+              <bucket>&quot;Waste&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Poland&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sector' id='Sector_0DEE9CF17A434AD2A3610CF71639C5AF'>
+            <properties context=''>
+              <relation connection='excel-direct.0flqco313eu5d31b50p0c0gtfm2g' name='Sector' table='[Sector$]' type='table'>
+                <columns gridOrigin='A1:B5:no:A1:B5:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Sector' ordinal='0' />
+                  <column datatype='real' name='Share of global greenhouse gas emissions (%)' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Sector_0DEE9CF17A434AD2A3610CF71639C5AF' table='[Extract].[Sector_0DEE9CF17A434AD2A3610CF71639C5AF]' type='table' />
+            </properties>
+          </object>
+          <object caption='Sub-sector' id='Sub-sector_1680B0E8915F403987BEC38808484A84'>
+            <properties context=''>
+              <relation connection='excel-direct.0flqco313eu5d31b50p0c0gtfm2g' name='Sub-sector' table='[&apos;Sub-sector$&apos;]' type='table'>
+                <columns gridOrigin='A1:B18:no:A1:B18:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Sub-sector' ordinal='0' />
+                  <column datatype='real' name='Share of global greenhouse gas emissions (%)' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Sub-sector_1680B0E8915F403987BEC38808484A84' table='[Extract].[Sub-sector_1680B0E8915F403987BEC38808484A84]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Share of global greenhouse gas emissions (%)]' />
+              <expression op='[Share of global greenhouse gas emissions (%) (Sub-sector)]' />
+            </expression>
+            <first-end-point object-id='Sector_0DEE9CF17A434AD2A3610CF71639C5AF' />
+            <second-end-point object-id='Sub-sector_1680B0E8915F403987BEC38808484A84' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#666666' fontname='Tableau Book'>Procentowy udział sektorów w globalnej emisji gazów cieplarnianych</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sector (Global-GHG-Emissions-by-sector-based-on-WRI-2020)' name='federated.1ddcmni1274yno16dotgq14io93z' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ddcmni1274yno16dotgq14io93z'>
+            <column caption='Sector (Sector)' datatype='string' name='[Sector]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Agriculture, Forestry &amp; Land Use (AFOLU)&quot;' value='Rolnictwo, leśnictwo i użytkowanie gruntów ' />
+                <alias key='&quot;Energy&quot;' value='Energia' />
+                <alias key='&quot;Industrial processes&quot;' value='Procesy przemysłowe' />
+                <alias key='&quot;Waste&quot;' value='Odpady' />
+              </aliases>
+            </column>
+            <column datatype='real' name='[Share of global greenhouse gas emissions (%)]' role='measure' type='quantitative' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Share of global greenhouse gas emissions (%)]' derivation='Sum' name='[sum:Share of global greenhouse gas emissions (%):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='560' />
+            <format attr='cell-h' value='560' />
+            <format attr='cell' value='70' />
+            <format attr='cell-q' value='350' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1ddcmni1274yno16dotgq14io93z].[none:Sector:nk]' />
+              <wedge-size column='[federated.1ddcmni1274yno16dotgq14io93z].[sum:Share of global greenhouse gas emissions (%):qk]' />
+              <size column='[federated.1ddcmni1274yno16dotgq14io93z].[sum:Share of global greenhouse gas emissions (%):qk]' />
+              <text column='[federated.1ddcmni1274yno16dotgq14io93z].[none:Sector:nk]' />
+              <text column='[federated.1ddcmni1274yno16dotgq14io93z].[sum:Share of global greenhouse gas emissions (%):qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Sektor:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1ddcmni1274yno16dotgq14io93z].[none:Sector:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#666666'>Udział w globalnej emisji gazów cieplarnianych (%)</run>
+                <run fontcolor='#787878'>:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1ddcmni1274yno16dotgq14io93z].[sum:Share of global greenhouse gas emissions (%):qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-orientation' value='0' />
+                <format attr='text-align' value='auto' />
+                <format attr='vertical-align' value='auto' />
+                <format attr='wrap' value='on' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#1b1b1b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9DC08F37-BA86-48B1-A5A4-CA77EA498D81}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ddcmni1274yno16dotgq14io93z].[none:Sector:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ddcmni1274yno16dotgq14io93z].[none:Sector:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{967D7BBB-C3DE-4710-B081-C8C2805697C2}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
